@@ -111,3 +111,4 @@ alias ff='fastfetch --logo-type command-raw --logo "fortune song100 | cowsay -W 
 #   fastfetch --logo-type command-raw --logo "fortune tang300 | cowsay -W 50 | lolcat -f"
 # fi
 
+export EDITOR=nvim
