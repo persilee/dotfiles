@@ -1,0 +1,72 @@
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.smartindent = true
+vim.opt.termguicolors = true
+vim.opt.swapfile = false
+vim.opt.undofile = true -- 撤销历史持久化到磁盘（~/.local/state/nvim/undo），重启后仍可 u 撤销
+vim.opt.mouse = "a"
+vim.opt.laststatus = 3
+vim.opt.clipboard = "unnamedplus"
+vim.opt.autoread = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = false
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = true
+vim.opt.foldlevelstart = 99 -- 打开文件默认全部展开，不自动折叠
+-- 全局关闭长行自动折行显示
+vim.opt.wrap = false
+
+-- 禁止自动注释续行
+vim.opt.formatoptions:remove({ "c", "r", "o" })
+
+vim.opt.guicursor = {
+  -- 普通/可视/命令模式：方块光标，绑定 Cursor 高亮组
+  "n-v-c:block-Cursor",
+  -- 插入模式：25%宽度竖线，绑定 CursorInsert 高亮组
+  "i-ci:ver25-CursorInsert",
+  -- 替换模式：20%高度横线，绑定 CursorReplace 高亮组
+  "r-cr:hor20-CursorReplace",
+  -- 操作符等待模式：半高度方块
+  "o:hor50-Cursor",
+}
+vim.opt.cursorline = true -- 开启光标行高亮（可以只高亮行号）
+vim.opt.cursorlineopt = "number" -- 只高亮行号，而不是整行
+
+-- 全局 LSP 诊断配置
+vim.diagnostic.config({
+  signs = false, -- ❌ 左侧 gutter 不显示 E/W
+  -- underline = true, -- 保留下划线标记
+  -- virtual_text = true, -- 保留行内提示文字
+  -- update_in_insert = false, -- 插入模式不更新（可选）
+})
+
+-- 创建 :H 命令，在新 tab 中打开帮
+vim.api.nvim_create_user_command("Hv", function(opts)
+  vim.cmd("vertical help " .. (opts.args ~= "" and opts.args or ""))
+end, { nargs = "*", complete = "help" })
+
+vim.o.modeline = false
+
+-- 添加 '-' 词语
+vim.opt.iskeyword:append("-")
+
+-- 使得左右键可以跨行
+vim.o.whichwrap = vim.o.whichwrap .. "<>,h,l"
+
+vim.o.winborder = "rounded"
+
+-- 文件类型识别：cava 配置文件（[section] + key = value + ; 注释 → dosini 语法高亮）
+-- 注意：pattern 会被自动加 ^ 和 $ 锚定，不要自己写 $，否则变成字面字符匹配不到
+vim.filetype.add({
+  pattern = {
+    [".*/cava/config"] = "dosini",
+  },
+})
