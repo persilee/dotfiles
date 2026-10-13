@@ -1,7 +1,5 @@
 # TPM 插件自动安装，不进版本库
 .config/tmux/plugins
-# nvim 个人附件与笔记
-.config/nvim/attachments
-.config/nvim/nvim配置与快捷键总结.md
 .config/nvim/.git
+.config/zsh/plugins/
 **/.DS_Store
