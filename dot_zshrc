@@ -60,6 +60,9 @@ alias gcoall='git checkout -- .'
 alias gr='git remote'
 alias gre='git reset'
 
+# Chezmoi
+alias chi="chezmoi"
+
 # Eza
 alias l="eza -l --icons --git -a"
 alias ls="eza --icons=always"
