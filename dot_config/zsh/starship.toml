@@ -1,0 +1,106 @@
+# 根据 schema 提供自动补全
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# 命令结束后是否新增行
+add_newline = true
+
+# 启用 Catppuccin Mocha 调色板
+palette = "catppuccin_mocha"
+
+# ========== 整体布局 ==========
+format = '''
+$directory $git_branch$git_status $cmd_duration
+$character
+'''
+
+# ========== 提示符 ==========
+[character]
+vicmd_symbol = '[\[N\]➜](bold mauve)'
+success_symbol = "[➜](bold green)"    # Dracula 绿
+error_symbol = "[➜](bold red)"        # Dracula 红
+format = "$symbol "
+
+# ========== 当前目录 ==========
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+format = "[📂 ](text)[$path]($style)"
+read_only = "disabled"
+
+# ========== Git 分支 ==========
+[git_branch]
+format = "[$symbol$branch]($style)"
+symbol = "󰘬 "
+
+# ========== Git 状态 ==========
+[git_status]
+format = "$status"
+conflicted = "!"
+ahead = "↑"
+behind = "↓"
+untracked = "?"
+modified = "*"
+staged = "+"
+deleted = "✘"
+renamed = ""
+stashed = ""
+diverged = ""
+
+# ========== 命令耗时 ==========
+[cmd_duration]
+min_time = 1000
+style = "subtext0"             # Dracula 注释灰（低调不抢视线）
+format = "[$duration]($style)"
+show_milliseconds = false
+
+# ========== 禁用全部冗余模块 ==========
+[python]
+disabled = true
+[nodejs]
+disabled = true
+[rust]
+disabled = true
+[java]
+disabled = true
+[golang]
+disabled = true
+[docker_context]
+disabled = true
+[kubernetes]
+disabled = true
+[aws]
+disabled = true
+[gcloud]
+disabled = true
+[terraform]
+disabled = true
+[package]
+disabled = true
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"

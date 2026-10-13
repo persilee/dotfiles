@@ -1,0 +1,57 @@
+cd .config/zsh
+ll
+ls
+pwd
+vim ~/.config/kitty
+echo $ZDOTDIR
+ll
+ls
+ls -a
+cd .config
+ls
+vm starship.toml ./zsh
+mv starship.toml ./zsh
+ll
+ls
+cd zsh
+ls
+clear
+ls
+ls -la
+cat .zsh_history
+vi .zshrc
+cat .zshenv
+echo $XDG_CONFIG_HOME
+echo $HOME
+echo $ZDOTDIR
+echo $CONFIG_HOME
+cd ~/.config/zsh
+ll
+ls
+ls -l
+nvim .zshenv
+vi
+vi .zshenv
+ls
+~
+sudo ~
+cd ~
+pwd
+ls -a
+cd .local
+ls
+cd state
+ls
+mkdir zsh
+ls
+cd ..
+cd ..
+cd .cache
+ls
+mkdir zsh
+ls
+ll
+cd zsh
+ls -la
+echo $XDG_STATE_HOME
+echo $ZDOTDIR
