@@ -10,6 +10,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # ---------- 界面样式（--height 高度 / --layout 布局 / --border 边框 /
 #            --prompt 提示符 / --pointer 指针 / --preview-window 预览窗） ----------
+# ---------- Catppuccin-Mocha 配色（与 kitty 终端 / tmux 状态栏同一主题系列） ----------
 export FZF_DEFAULT_OPTS='
   --height=60%
   --layout=reverse
@@ -17,6 +18,10 @@ export FZF_DEFAULT_OPTS='
   --prompt="  "
   --pointer="  "
   --preview-window=right:65%:wrap:border-left
+  --color=bg+:#313244,bg:-1,spinner:#f5e0dc,hl:#f38ba8
+  --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
+  --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
+  --color=selected-bg:#45475a
 '
 
 # 预览命令：用 bat 高亮文件内容（纯文本+行号，最多 500 行）
