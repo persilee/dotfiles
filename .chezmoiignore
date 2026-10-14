@@ -1,5 +1,5 @@
 # TPM 插件自动安装，不进版本库
 .config/tmux/plugins
 .config/nvim/.git
-.config/zsh/plugins/
+.config/zsh/plugins
 **/.DS_Store

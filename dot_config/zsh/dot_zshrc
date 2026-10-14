@@ -1,65 +1,73 @@
-# Environment & PATH
+# =========================================================
+# ~/.config/zsh/.zshrc —— 交互式 shell 主配置
+# 加载顺序：环境变量(exports) → 历史 → Shell 行为 → 补全 → fzf → 各功能模块
+# =========================================================
+
+# ---------- 环境变量与 PATH（必须最先加载，后续模块依赖 PATH） ----------
 source "$ZDOTDIR/exports.zsh"
 
 # =========================================================
-# History
+# 历史记录
 # =========================================================
 
+# 历史文件位置与大小（存放到 XDG state 目录）
 HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=100000
 SAVEHIST=100000
 
-setopt APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_FIND_NO_DUPS
+# 历史记录行为选项
+setopt APPEND_HISTORY     # 追加写入历史，而非每次覆盖
+setopt SHARE_HISTORY      # 多个会话共享历史
+setopt HIST_IGNORE_DUPS   # 忽略重复命令
+setopt HIST_IGNORE_SPACE  # 以空格开头的命令不记入历史
+setopt HIST_EXPIRE_DUPS_FIRST  # 历史超限时优先删除重复项
+setopt HIST_FIND_NO_DUPS  # 历史搜索时不显示重复项
 
 # =========================================================
-# Shell behaviour
+# Shell 行为
 # =========================================================
 
-setopt AUTOCD
-setopt NOBEEP
-setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
+setopt AUTOCD             # 输入目录路径直接进入（免敲 cd）
+setopt NOBEEP             # 关闭错误提示音
+setopt NUMERIC_GLOB_SORT  # 文件名按数值排序（file10 排在 file9 之后，而非 file1 之后）
 
+# ---------- zoxide：智能目录跳转 ----------
 eval "$(zoxide init zsh)"
 
 # =========================================================
-# Completion
+# 补全系统
 # =========================================================
 
-# Load completion system
+# 加载补全系统
 autoload -Uz compinit
 
-# Initialize completion with cached metadata file
+# 使用缓存元数据文件初始化补全（加快启动速度）
 compinit -d "$XDG_CACHE_HOME/zsh/zcompdump"
 
-# Enable interactive completion menu selection
+# 启用交互式补全菜单选择
 zstyle ':completion:*' menu select
 
-# Make completion case-insensitive
-# Example: "doc" can complete to "Documents"
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # lowercase input matches upper and lower
+# 补全大小写不敏感
+# 例："doc" 可以补全出 "Documents"
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # 小写输入可同时匹配大写
 
 # =========================================================
-# Fuzzy finder
+# Fuzzy finder（fzf 键位与补全脚本）
 # =========================================================
 
-# macOS / Homebrew (Apple Silicon)
+# macOS / Homebrew（Apple Silicon）
 if [[ -f /opt/homebrew/opt/fzf/shell/key-bindings.zsh ]]; then
   source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
   source /opt/homebrew/opt/fzf/shell/completion.zsh
 fi
 
-# macOS / Homebrew (Intel)
+# macOS / Homebrew（Intel）
 if [[ -f /usr/local/opt/fzf/shell/key-bindings.zsh ]]; then
   source /usr/local/opt/fzf/shell/key-bindings.zsh
   source /usr/local/opt/fzf/shell/completion.zsh
 fi
 
-# Arch
+# Arch Linux
 if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
   source /usr/share/fzf/key-bindings.zsh
   source /usr/share/fzf/completion.zsh
@@ -72,26 +80,26 @@ if [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
 fi
 
 # =========================================================
-# Modular Config Files
+# 模块化配置加载（按主题拆分到独立文件）
 # =========================================================
 
-# Programming languages
+# 编程语言环境（pyenv / nvm / go / rust）
 source "$ZDOTDIR/python.zsh"
 source "$ZDOTDIR/node.zsh"
 source "$ZDOTDIR/go.zsh"
 source "$ZDOTDIR/rust.zsh"
 
-# fzf configuration
+# fzf 配置
 source "$ZDOTDIR/fzf.zsh"
 
-# Aliases
+# 别名
 source "$ZDOTDIR/aliases.zsh"
 
-# Custom keybindings
+# 自定义键位
 source "$ZDOTDIR/bindings.zsh"
 
-# Plugins and plugin manager
+# 插件与插件管理
 source "$ZDOTDIR/plugins.zsh"
 
-# Prompt/theme
+# 提示符/主题
 source "$ZDOTDIR/prompt.zsh"

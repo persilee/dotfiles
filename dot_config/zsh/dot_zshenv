@@ -1,13 +1,16 @@
-# ~/.config/zsh/.zshenv
+# =========================================================
+# ~/.config/zsh/.zshenv —— 全局 zsh 环境（最先加载）
+# 说明：所有 zsh 会话（含非交互）都会读取，只放最基础的环境变量
+# =========================================================
 
-# ---------- XDG base directories ----------
-# Centralizes config/cache/data locations
+# ---------- XDG 基础目录 ----------
+# 统一配置/缓存/数据/状态目录位置
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
-# ---------- Editor ----------
-# Default editor used by git, crontab, etc.
+# ---------- 默认编辑器 ----------
+# git、crontab 等外部工具使用的默认编辑器
 export EDITOR="nvim"
 export VISUAL="nvim"

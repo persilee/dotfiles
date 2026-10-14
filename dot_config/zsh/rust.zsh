@@ -1,5 +1,6 @@
 # =========================================================
-# ~/.config/zsh/rust.zsh —— Rust / cargo
+# ~/.config/zsh/rust.zsh —— Rust / cargo 环境
 # =========================================================
 
-. "$HOME/.local/bin/env"   # rustup 生成的环境文件（加入 ~/.cargo/bin）
+# 加载 rustup 生成的环境文件（把 ~/.cargo/bin 加入 PATH 并设置 rustup 工具链）
+. "$HOME/.local/bin/env"

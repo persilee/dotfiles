@@ -1,33 +1,36 @@
 # =========================================================
-# Keybindings
+# ~/.config/zsh/bindings.zsh —— 自定义键位绑定
 # =========================================================
 
-# Cursor shape per vi mode
+# ---------- zsh-vi-mode：各模式下的光标形状 ----------
+# 插入模式：竖线光标
 ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
+# 普通模式：方块光标
 ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+# 可视模式：方块光标
 ZVM_VISUAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 
-# Disable command mode line highlight
+# ---------- zsh-vi-mode：关闭命令行高亮 ----------
 ZVM_VI_HIGHLIGHT_BACKGROUND=none
 ZVM_VI_HIGHLIGHT_FOREGROUND=none
 ZVM_VI_HIGHLIGHT_EXTRASTYLE=none
 
-# zsh-vi-mode resets all bindings on init, so custom bindings
-# must be registered via this hook to survive.
+# zsh-vi-mode 初始化时会重置所有绑定，
+# 因此自定义绑定必须通过这个钩子注册才能保留。
 zvm_after_init() {
-  # Ctrl+Right -> move forward one word (^[[1;5C is the terminal escape code)
+  # Ctrl+→：按词前移光标（^[[1;5C 是终端转义码）
   bindkey '^[[1;5C' forward-word
 
-  # Ctrl+Left -> move backward one word (^[[1;5D is the terminal escape code)
+  # Ctrl+←：按词后移光标（^[[1;5D 是终端转义码）
   bindkey '^[[1;5D' backward-word
 
-  # Ctrl+F -> fzf file picker (no hidden files)
+  # Ctrl+F：fzf 文件选择器（不含隐藏文件）
   bindkey '^F' _fzf_file_no_hidden
 
-  # Ctrl+\ -> toggle autosuggestions (useful for screen recordings)
+  # Ctrl+\：切换自动建议（录屏演示时有用）
   bindkey '^\' autosuggest-toggle
 
-  # Up/Down -> history search by substring (^[[A/^[[B are up/down arrow escape codes)
+  # ↑/↓：按子串搜索历史（^[[A/^[[B 是上下箭头转义码）
   bindkey '^[[A' history-substring-search-up
   bindkey '^[[B' history-substring-search-down
 }
