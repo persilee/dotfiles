@@ -4,7 +4,7 @@
 
 # ---------- zsh-vi-mode：各模式下的光标形状 ----------
 # 插入模式：竖线光标
-ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
 # 普通模式：方块光标
 ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 # 可视模式：方块光标

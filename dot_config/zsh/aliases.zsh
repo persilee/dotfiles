@@ -30,6 +30,7 @@ alias cat='bat'
 alias grep='rg --color=auto'    # 全文搜索换用 ripgrep
 alias diff='diff --color=auto'  # diff 彩色输出
 alias df='df -h'                # 磁盘空间以人类可读单位显示
+alias manr="tldr" 
 
 # =========================================================
 # 目录导航
@@ -93,11 +94,14 @@ alias gr='git remote'
 alias dotfiles='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 
 # =========================================================
-# 视频
+# 视频 & 音乐
 # =========================================================
 
 # 摄像头实时预览（mpv 低延迟全屏）
 alias stream='mpv av://v4l2:/dev/video4 --fullscreen --demuxer-lavf-o=input_format=mjpeg,framerate=30 --profile=low-latency --untimed'
+
+# 一键分屏kitty窗口,打开pigma(音乐)和cava(频谱条)
+alias music="$ZDOTDIR/scripts/pigma-cava-kitty.sh"
 
 # =========================================================
 # Chezmoi（dotfiles 管理）
