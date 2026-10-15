@@ -8677,3 +8677,66 @@ response: {"code":432,"message":"今日暂无更多推荐"}
 [2026-10-15 23:44:15 DEBUG pigma::playback::player] falling back to default audio device
 [2026-10-15 23:44:15 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
 [2026-10-15 23:44:15 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-15 23:48:08 DEBUG symphonia_core::probe] found a possible format marker within [49, 44, 33, 3, 0, 0, 0, 0, 1, 6, 54, 58, 58, 58, 0, 0] @ 0+2 bytes.
+[2026-10-15 23:48:08 DEBUG symphonia_core::probe] found the format marker [49, 44, 33] @ 0+2 bytes.
+[2026-10-15 23:48:08 DEBUG symphonia_core::probe] chaining a metadata element.
+[2026-10-15 23:48:08 DEBUG symphonia_core::probe] found a possible format marker within [ff, fb, 94, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] @ 144+2 bytes.
+[2026-10-15 23:48:08 DEBUG symphonia_core::probe] found the format marker [ff, fb] @ 144+2 bytes.
+[2026-10-15 23:48:08 DEBUG symphonia_bundle_mp3::demuxer] using xing header for duration
+[2026-10-15 23:52:10 DEBUG reqwest::connect] starting new connection 'Some("music.163.com")'
+[2026-10-15 23:52:10 DEBUG ncm_api::client] send_eapi path=/api/song/enhance/player/url/v1 status=200 OK body(len=1110): "{\"data\":[{\"id\":25642484,\"url\":\"http://m801.music.126.net/20261016001710/b9fb5aa2ea355d2b60e9ae65e5a12312/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/12598458174/7756/b871/586c/430aede275e69478864a294e2ab15ef4.m4"
+[2026-10-15 23:52:10 DEBUG ncm_api::client::song] songs_url_v1 raw response (first 500): "{\"data\":[{\"id\":25642484,\"url\":\"http://m801.music.126.net/20261016001710/b9fb5aa2ea355d2b60e9ae65e5a12312/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/12598458174/7756/b871/586c/430aede275e69478864a294e2ab15ef4.m4a?vuutv=a9Xco3mvIx5eyUiPq97vNqzqql0J6JyGf18V1ccK2rKi+2iF8SzOHFWyMSNgizMvcrSaZVkZBlzQRNTlqS/Y3wMRL7Ir3x81J34ofaxd5ek=\",\"br\":96022,\"size\":2204253,\"md5\":\"430aede275e69478864a294e2ab15ef4\",\"code\":200,\"expi\":1200,\"type\":\"m4a\",\"gain\":-6.875,\"peak\":1.0382,\"closedGain\":-5.4845514,\"closedPeak\":0.8399,\"fee\":8"
+[2026-10-15 23:52:10 DEBUG reqwest::connect] starting new connection 'Some("m801.music.126.net")'
+[2026-10-15 23:52:10 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 69, 73, 6f, 6d, 0, 0, 2, 0, 69, 73, 6f, 6d] @ 0+6 bytes.
+[2026-10-15 23:52:10 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-15 23:55:11 DEBUG reqwest::connect] starting new connection 'Some("music.163.com")'
+[2026-10-15 23:55:11 DEBUG ncm_api::client] send_eapi path=/api/song/enhance/player/url/v1 status=200 OK body(len=1067): "{\"data\":[{\"id\":5239884,\"url\":\"http://m801.music.126.net/20261016002011/94ba20d720e0f3e6c8e60a497a576d22/jdyyaac/070b/0f0c/0753/0a6ec5e5e18fb476b2d309984ac2d49d.m4a?vuutv=BMsaArIlDnZ1Xkx09zUsTZQ2mFN8Mh"
+[2026-10-15 23:55:11 DEBUG ncm_api::client::song] songs_url_v1 raw response (first 500): "{\"data\":[{\"id\":5239884,\"url\":\"http://m801.music.126.net/20261016002011/94ba20d720e0f3e6c8e60a497a576d22/jdyyaac/070b/0f0c/0753/0a6ec5e5e18fb476b2d309984ac2d49d.m4a?vuutv=BMsaArIlDnZ1Xkx09zUsTZQ2mFN8MhiUcygd+4wAbkSSbkCBIP0Av0OJfLHtDY9btoZXlnptofcJrshtjoOzrC4BjoIEhJlMVr6ff8jyfqU=\",\"br\":96000,\"size\":3189292,\"md5\":\"0a6ec5e5e18fb476b2d309984ac2d49d\",\"code\":200,\"expi\":1200,\"type\":\"m4a\",\"gain\":-7.2522,\"peak\":1.2163,\"closedGain\":-6.0,\"closedPeak\":0.9704,\"fee\":0,\"uf\":null,\"payed\":0,\"flag\":2064640,\"canExt"
+[2026-10-15 23:55:11 DEBUG reqwest::connect] starting new connection 'Some("m801.music.126.net")'
+[2026-10-15 23:55:12 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 69, 73, 6f, 6d, 0, 0, 2, 0, 69, 73, 6f, 6d] @ 0+6 bytes.
+[2026-10-15 23:55:12 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-15 23:59:34 DEBUG reqwest::connect] starting new connection 'Some("music.163.com")'
+[2026-10-15 23:59:34 DEBUG ncm_api::client] send_eapi path=/api/song/enhance/player/url/v1 status=200 OK body(len=1102): "{\"data\":[{\"id\":33599439,\"url\":\"http://m701.music.126.net/20261016002434/144069ae9d323032cb62e3745a41db29/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/28481782715/a731/b801/7b4c/110c8e4da99ad5fbc1fe67fb551e9c56.m4"
+[2026-10-15 23:59:34 DEBUG ncm_api::client::song] songs_url_v1 raw response (first 500): "{\"data\":[{\"id\":33599439,\"url\":\"http://m701.music.126.net/20261016002434/144069ae9d323032cb62e3745a41db29/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/28481782715/a731/b801/7b4c/110c8e4da99ad5fbc1fe67fb551e9c56.m4a?vuutv=mgNc0AAVytZy4wsXUw4farF8sTWTHwwdt7Z+0FRLeRXBCvrcliN8+8RS6mn8QBUrzdEuPL/e293chz9bH+MdmBX7+BaXUC0La911d4ZRUvI=\",\"br\":96015,\"size\":3370965,\"md5\":\"110c8e4da99ad5fbc1fe67fb551e9c56\",\"code\":200,\"expi\":1200,\"type\":\"m4a\",\"gain\":-9.0597,\"peak\":1.2799,\"closedGain\":-6.0,\"closedPeak\":1.0,\"fee\":8,\"uf\":nu"
+[2026-10-15 23:59:34 DEBUG reqwest::connect] starting new connection 'Some("m701.music.126.net")'
+[2026-10-15 23:59:34 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-15 23:59:34 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 00:04:11 DEBUG reqwest::connect] starting new connection 'Some("music.163.com")'
+[2026-10-16 00:04:11 DEBUG ncm_api::client] send_eapi path=/api/song/enhance/player/url/v1 status=200 OK body(len=1103): "{\"data\":[{\"id\":114442,\"url\":\"http://m701.music.126.net/20261016002911/96373152fd399cdf901400399bd62a2c/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/11839857817/1275/2a7d/54a8/86ca316aa48169b485ceb0330f946d56.m4a?"
+[2026-10-16 00:04:11 DEBUG ncm_api::client::song] songs_url_v1 raw response (first 500): "{\"data\":[{\"id\":114442,\"url\":\"http://m701.music.126.net/20261016002911/96373152fd399cdf901400399bd62a2c/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/11839857817/1275/2a7d/54a8/86ca316aa48169b485ceb0330f946d56.m4a?vuutv=rkJQXFeylXwbSGF5TFz2iRRWDr8RK37pu6VuH96efJRJR5b5sPDmNS/gszxrpCGZjG3GyAP3BCGYS2P+rqczNMIA/vyOxcNQgNEX/isY4zA=\",\"br\":96018,\"size\":3828235,\"md5\":\"86ca316aa48169b485ceb0330f946d56\",\"code\":200,\"expi\":1200,\"type\":\"m4a\",\"gain\":-4.0271,\"peak\":1.1022,\"closedGain\":-6.0,\"closedPeak\":0.9617,\"fee\":0,\"uf\":n"
+[2026-10-16 00:04:12 DEBUG reqwest::connect] starting new connection 'Some("m701.music.126.net")'
+[2026-10-16 00:04:12 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 69, 73, 6f, 6d, 0, 0, 2, 0, 69, 73, 6f, 6d] @ 0+6 bytes.
+[2026-10-16 00:04:12 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 00:09:26 DEBUG reqwest::connect] starting new connection 'Some("music.163.com")'
+[2026-10-16 00:09:26 DEBUG ncm_api::client] send_eapi path=/api/song/enhance/player/url/v1 status=200 OK body(len=1105): "{\"data\":[{\"id\":5243638,\"url\":\"http://m701.music.126.net/20261016003426/92d6df20b2f32ca27cb62cc9cb1c37e9/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/34856619766/a06a/f1a4/b5a2/a1f1da07d7f9577b4cd6acdb39618c11.m4a"
+[2026-10-16 00:09:26 DEBUG ncm_api::client::song] songs_url_v1 raw response (first 500): "{\"data\":[{\"id\":5243638,\"url\":\"http://m701.music.126.net/20261016003426/92d6df20b2f32ca27cb62cc9cb1c37e9/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/34856619766/a06a/f1a4/b5a2/a1f1da07d7f9577b4cd6acdb39618c11.m4a?vuutv=4RtV4SlvjgZ7nkfKb5BHl1IXuWVF1/KcrlGIUz2x5uRDh8IAlrQtdcE9wQpjaYN9u8ltD+ssShpFQRxK9ihwsDVQ+zXdUaf8AhJ0cpg5Iic=\",\"br\":96001,\"size\":3588940,\"md5\":\"a1f1da07d7f9577b4cd6acdb39618c11\",\"code\":200,\"expi\":1200,\"type\":\"m4a\",\"gain\":-6.9483,\"peak\":1.2284,\"closedGain\":-6.0,\"closedPeak\":0.9501,\"fee\":8,\"uf\":"
+[2026-10-16 00:09:26 DEBUG reqwest::connect] starting new connection 'Some("m701.music.126.net")'
+[2026-10-16 00:09:27 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 00:09:27 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 00:14:22 DEBUG reqwest::connect] starting new connection 'Some("music.163.com")'
+[2026-10-16 00:14:22 DEBUG ncm_api::client] send_eapi path=/api/song/enhance/player/url/v1 status=200 OK body(len=1099): "{\"data\":[{\"id\":110740,\"url\":\"http://m801.music.126.net/20261016003922/1746426124bde64223a9009047850e1c/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/34400867606/4004/4ed7/c058/2554ebe944aea4ce5c632cba4f2bf71f.m4a?"
+[2026-10-16 00:14:22 DEBUG ncm_api::client::song] songs_url_v1 raw response (first 500): "{\"data\":[{\"id\":110740,\"url\":\"http://m801.music.126.net/20261016003922/1746426124bde64223a9009047850e1c/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/34400867606/4004/4ed7/c058/2554ebe944aea4ce5c632cba4f2bf71f.m4a?vuutv=xSHFJTO7zL0ZHqJFfh1cU2CT9lA6Er0Dniez/3erf2WMviHjGCy0QN498EhocwyicG2uJQT67ZKvkeT9gYNGgklbQyJQSMUGkh0ptcQ26vs=\",\"br\":96020,\"size\":3597814,\"md5\":\"2554ebe944aea4ce5c632cba4f2bf71f\",\"code\":200,\"expi\":1200,\"type\":\"m4a\",\"gain\":-2.3114,\"peak\":1.106,\"closedGain\":-6.0,\"closedPeak\":1.0,\"fee\":0,\"uf\":null,"
+[2026-10-16 00:14:22 DEBUG reqwest::connect] starting new connection 'Some("m801.music.126.net")'
+[2026-10-16 00:14:22 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 00:14:22 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 00:23:01 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2 -> coreaudio:C0-95-6D-AB-DF-A7:output），切换音频设备
+[2026-10-16 00:23:01 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-16 00:23:01 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-16 00:23:01 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 00:23:01 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 00:23:01 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-16 00:23:01 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-16 04:50:37 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:C0-95-6D-AB-DF-A7:output -> coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2），切换音频设备
+[2026-10-16 04:50:37 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-16 04:50:37 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-16 04:50:37 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 04:50:37 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 04:50:37 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-16 04:50:37 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-16 05:10:29 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2 -> coreaudio:C0-95-6D-AB-DF-A7:output），切换音频设备
+[2026-10-16 05:10:30 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-16 05:10:30 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-16 05:10:30 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 05:10:30 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 05:10:30 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-16 05:10:30 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)

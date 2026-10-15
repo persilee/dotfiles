@@ -1,0 +1,53 @@
+# =========================================================
+# ~/.config/lf/lfrc —— lf 文件管理器配置
+# lf 官方文档: https://pkg.go.dev/github.com/gokcehan/lf
+# 配置查找顺序: -config 参数 > $XDG_CONFIG_HOME/lf/lfrc > /etc/lf/lfrc
+# =========================================================
+
+# ---------- 基础显示设置 ----------
+set hidden           # 默认显示隐藏文件（按 . 可切换）
+set drawbox          # 用线条绘制边框（界面更清晰）
+set borderfmt "38;5;250" # 边框颜色：256色250 ≈ #b2bbc2 亮灰（与 bat 注释色统一）
+set icons            # 显示文件类型图标（依赖 Nerd Font，你有 Maple Mono NF CN）
+set ignorecase       # 搜索时忽略大小写
+set relativenumber   # 显示相对行号（方便 vi 风格跳转）
+
+# ---------- 布局 ----------
+set ratios 1:2:3     # 三栏布局：目录树:当前目录:预览（可按 w 切换）
+
+# ---------- 常用键位映射 ----------
+# 打开/预览文件（回车：目录进入 / 文件预览）
+map <enter> :open
+
+# v 用默认编辑器打开当前文件（继承 $EDITOR=nvim）
+map v $"$EDITOR" "$f"
+
+# p 复制当前文件路径到系统剪贴板（依赖 pbcopy）
+map p $echo -n "$f" | pbcopy
+
+# P 复制当前目录路径到系统剪贴板
+map P $echo -n "$(dirname "$f")" | pbcopy
+
+# f 用 fzf 在当前目录模糊跳转（依赖 fzf）
+map f $fzf
+
+# F 用 fzf 在子目录中查找文件并跳转
+map F $fzf --query "$(basename "$f")" --preview 'bat --color=always --style=plain,numbers {}'
+
+# g 返回上级目录（与 vi 习惯一致：g 到顶）
+map g cd ..
+
+# ---------- 排序 ----------
+set sortby name      # 按名称排序（默认）
+# set sortby time     # 如需按修改时间排序，取消注释
+
+# ---------- 预览器 ----------
+# 用 bat 渲染文件内容（语法高亮 + 行号）；脚本已就绪：
+#   ~/.config/lf/preview.sh（bat 渲染，需 chmod +x）
+#   ~/.config/lf/cleaner.sh（预览后清理残影）
+set previewer ~/.config/lf/preview.sh
+set cleaner ~/.config/lf/cleaner.sh
+
+# ---------- 备注 ----------
+# 退出后自动 cd 到最后目录：由 zsh 的 lf() 封装实现（-last-dir-path 参数），
+# 无需在此配置。需要时也可在 lf 内按 :set lastdir 查看当前目录记录。

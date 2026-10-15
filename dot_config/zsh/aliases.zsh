@@ -14,8 +14,8 @@ alias la='eza -lah --icons --git'
 
 # 树形目录视图
 alias tree='eza --tree --icons'
-alias lt="eza --tree --level=2 --long --icons --git"
-alias ltree="eza --tree --level=2  --icons --git"
+alias lt="eza --tree --level=2 --icons --git"
+alias ltree="eza --tree --level=2 --long --icons --git"
 
 # 复用 ls 的补全（避免为 eza 单独定义补全函数）
 compdef eza=ls

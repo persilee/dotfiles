@@ -1,0 +1,10 @@
+# =========================================================
+# ~/.config/bat/config —— bat 语法高亮配置
+# 参考: https://github.com/sharkdp/bat#configuration-file
+# 每行一个命令行参数，等效于在命令行追加
+# =========================================================
+
+# 统一主题：Dracula-CommentBright
+# 基于 Dracula 配色，仅将注释色从 #6272A4 调亮为 #b2bbc2（深色背景更清晰）
+# 与终端配色（kitty Dracula）、fzf（FZF_DEFAULT_OPTS Dracula）保持同一风格
+--theme="Dracula-CommentBright"
