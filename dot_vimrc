@@ -1,0 +1,35 @@
+set number
+imap jj <Esc>
+
+" ========== 缩进与Tab设置 ==========
+" 1个Tab视觉显示为2个空格宽度
+set tabstop=2
+" 自动缩进、>>/<< 操作的缩进宽度为2
+set shiftwidth=2
+" 按Tab键自动替换为空格，不插入真实制表符
+set expandtab
+" 退格键一次删除2个空格，和Tab对齐
+set softtabstop=2
+" 智能缩进
+"set smartindent
+
+" ========== 中文编码设置 ==========
+" Vim内部使用UTF-8编码
+set encoding=utf-8
+" 打开文件时自动尝试的编码优先级，兼容Windows的GBK系列
+set fileencodings=utf-8,gbk,gb2312,gb18030,cp936,latin1
+" 终端显示编码为UTF-8
+set termencoding=utf-8
+" 修复全角字符显示宽度异常
+set ambiwidth=double
+
+" 语法高亮
+syntax on
+" 搜索结果高亮
+set hlsearch
+
+
+call plug#begin()
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'bullets-vim/bullets.vim'
+call plug#end()
