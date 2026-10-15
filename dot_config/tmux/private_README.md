@@ -66,7 +66,7 @@
 | **tmux-yank**               | 声明                       | 复制文本到系统剪贴板（配合 macOS pbcopy）                            |
 | **tmux-resurrect**          | 声明                       | 手动保存/恢复会话（窗格布局、pane 内容、nvim 会话）                  |
 | **tmux-continuum**          | 声明                       | 定时自动保存 + 重启后自动恢复会话                                    |
-| **tmux-thumbs**             | 声明                       | 屏幕文本快速复制（hints：按序号选中即复制）                          |
+| **tmux-thumbs**             | 声明                       | 屏幕文本快速复制（hints 模式，激活键 `prefix+t`，原默认 `prefix+Space` 已让给布局循环）                          |
 | **tmux-fzf**                | 声明                       | fzf 快速切换窗口/会话                                                |
 | **tmux-fzf-url**            | 声明                       | 扫描历史命令中的 URL，fzf 选中后用浏览器打开                         |
 | **catppuccin-tmux**         | **手动 clone + run-shell** | Catppuccin 主题状态栏（不在 tpm 目录时需手动加载）                   |
@@ -244,7 +244,7 @@
 | `Ctrl+A p`                   | 打开/关闭**浮动窗口**（floax）               |
 | `Ctrl+A o`                   | 打开**会话选择器**（sessionx，fzf 模糊搜索） |
 | `Ctrl+A g`                   | 当前路径弹出 **lazygit**                     |
-| `Ctrl+A Space`（kitty 透传） | tmux 布局循环切换                            |
+| `Ctrl+A Space`（kitty 透传） | tmux 布局循环切换（next-layout，配置文件里显式 `bind space next-layout` 恢复，防止 thumbs 插件抢占） |
 | `Ctrl+A w`（kitty 透传）     | tmux 拆离会话                                |
 | `Ctrl+A z`（kitty 透传）     | 窗格全屏/还原                                |
 
@@ -275,7 +275,7 @@
 ### 4.4 文本复制
 
 - **系统剪贴板**：`copy_on_select` + tmux-yank，在复制模式选中即复制到 macOS 剪贴板
-- **快速复制屏幕文本**（tmux-thumbs）：在 pane 里按 `Ctrl+A Space` 或插件默认键（通常是 `Ctrl+A` 后再按 `Space` 外的绑定）→ 屏幕文本标序号 → 按序号即复制对应文本
+- **快速复制屏幕文本**（tmux-thumbs）：在 pane 里按 `Ctrl+A t`（激活键已从默认的 Space 改到 t）→ 屏幕文本标出字符序号 → 按序号即复制对应文本到系统剪贴板
 
 ### 4.5 会话切换与浮动窗口
 
