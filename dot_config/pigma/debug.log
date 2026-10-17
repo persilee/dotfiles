@@ -8740,3 +8740,80 @@ response: {"code":432,"message":"今日暂无更多推荐"}
 [2026-10-16 05:10:30 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
 [2026-10-16 05:10:30 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
 [2026-10-16 05:10:30 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-16 08:22:16 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:C0-95-6D-AB-DF-A7:output -> coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2），切换音频设备
+[2026-10-16 08:22:16 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-16 08:22:16 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-16 08:22:16 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 08:22:16 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 08:22:16 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-16 08:22:16 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-16 08:24:24 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2 -> coreaudio:~:AMS2_StackedOutput:0），切换音频设备
+[2026-10-16 08:24:25 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-16 08:24:32 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-16 08:24:32 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 08:24:32 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 08:24:32 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-16 08:24:32 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-16 08:24:37 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:~:AMS2_StackedOutput:0 -> coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2），切换音频设备
+[2026-10-16 08:24:37 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-16 08:24:37 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-16 08:24:37 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 08:24:37 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 08:24:37 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-16 08:24:37 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-16 22:54:48 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2 -> coreaudio:C0-95-6D-AB-DF-A7:output），切换音频设备
+[2026-10-16 22:54:48 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-16 22:54:49 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-16 22:54:49 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 22:54:49 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 22:54:49 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-16 22:54:49 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-16 23:33:21 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:C0-95-6D-AB-DF-A7:output -> coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2），切换音频设备
+[2026-10-16 23:33:21 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-16 23:33:21 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-16 23:33:21 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 23:33:21 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 23:33:21 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-16 23:33:21 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-16 23:51:08 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2 -> coreaudio:C0-95-6D-AB-DF-A7:output），切换音频设备
+[2026-10-16 23:51:08 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-16 23:51:08 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-16 23:51:08 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-16 23:51:08 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-16 23:51:08 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-16 23:51:08 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-17 03:17:21 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:C0-95-6D-AB-DF-A7:output -> coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2），切换音频设备
+[2026-10-17 03:17:21 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-17 03:17:21 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-17 03:17:21 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-17 03:17:21 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-17 03:17:21 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-17 03:17:21 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-17 04:28:58 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2 -> coreaudio:C0-95-6D-AB-DF-A7:output），切换音频设备
+[2026-10-17 04:28:58 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-17 04:28:58 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-17 04:28:58 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-17 04:28:58 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-17 04:28:58 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-17 04:28:58 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-17 09:12:03 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:C0-95-6D-AB-DF-A7:output -> coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2），切换音频设备
+[2026-10-17 09:12:03 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-17 09:12:03 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-17 09:12:03 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-17 09:12:03 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-17 09:12:03 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-17 09:12:03 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-17 10:22:38 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2 -> coreaudio:C0-95-6D-AB-DF-A7:output），切换音频设备
+[2026-10-17 10:22:38 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-17 10:22:38 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-17 10:22:38 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-17 10:22:38 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-17 10:22:38 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-17 10:22:38 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
+[2026-10-17 12:35:59 INFO  pigma::playback::player] 默认输出设备变化（coreaudio:C0-95-6D-AB-DF-A7:output -> coreaudio:AppleUSBAudioEngine:Bang&Olufsen A/S:Beosound A1 2nd Gen:ABCDEF0123456789:2），切换音频设备
+[2026-10-17 12:35:59 DEBUG pigma::playback::player] falling back to default audio device
+[2026-10-17 12:35:59 INFO  pigma::playback::player] 音频设备已重建，从 5.97s 继续
+[2026-10-17 12:35:59 DEBUG symphonia_core::probe] found a possible format marker within [66, 74, 79, 70, 4d, 34, 41, 20, 0, 0, 2, 0, 4d, 34, 41, 20] @ 0+6 bytes.
+[2026-10-17 12:35:59 DEBUG symphonia_core::probe] found the format marker [66, 74, 79, 70] @ 0+6 bytes.
+[2026-10-17 12:35:59 DEBUG symphonia_format_isomp4::demuxer] seeking track=0 to frame_ts=263277
+[2026-10-17 12:35:59 DEBUG symphonia_format_isomp4::demuxer] seeked track=0 to packet_ts=263168 (delta=-109)
