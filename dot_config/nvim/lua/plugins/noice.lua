@@ -57,6 +57,14 @@ return {
 
       -- 过滤保存文件通知
       routes = {
+        -- 过滤 LSP attach 通知（"LSP attached: xxx"），不弹窗不打扰
+        {
+          filter = {
+            event = "notify",
+            find = "LSP attached", -- 匹配消息文本
+          },
+          opts = { skip = true }, -- 直接跳过，不显示也不记入历史
+        },
         {
           filter = {
             event = "notify",

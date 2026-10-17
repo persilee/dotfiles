@@ -3,3 +3,4 @@
 .config/nvim/.git
 .config/zsh/plugins
 **/.DS_Store
+.config/pigma/debug.log
