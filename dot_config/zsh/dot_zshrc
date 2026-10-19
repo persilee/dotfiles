@@ -103,3 +103,6 @@ source "$ZDOTDIR/plugins.zsh"
 
 # 提示符/主题
 source "$ZDOTDIR/prompt.zsh"
+
+# 杂项
+source "$ZDOTDIR/misc.zsh"
