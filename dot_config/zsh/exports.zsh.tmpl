@@ -29,3 +29,12 @@ export GPG_TTY=$(tty)
 
 # ---------- Starship 提示符配置 ----------
 export STARSHIP_CONFIG="$ZDOTDIR/starship.toml"
+
+
+# ---------- LLM Key ----------
+# 每次终端启动时从 macOS 钥匙串读取；仓库不存明文 key
+# 新机器首次使用前需执行: security add-generic-password -U -a lishaoying -s "LLM_KEY" -w "你的key"
+export LLM_KEY="$(security find-generic-password -s "LLM_KEY" -w 2>/dev/null)"
+if [ -z "${LLM_KEY}" ]; then
+  echo "⚠️ 未找到 LLM_KEY（钥匙串），请先执行: security add-generic-password -U -a lishaoying -s \"LLM_KEY\" -w \"你的key\"" >&2
+fi

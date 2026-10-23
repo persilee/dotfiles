@@ -4,18 +4,18 @@
 
 # ---------- 文件浏览（eza 替代 ls） ----------
 # 增强版 ls：带文件类型图标
-alias ls='eza --icons'
+alias ls='eza --icons=auto'
 
 # 详细信息列表（含 git 状态）
-alias ll='eza -lh --icons --git'
+alias ll='eza -lh --icons=auto --git'
 
 # 详细信息列表（含隐藏文件）
-alias la='eza -lah --icons --git'
+alias la='eza -lah --icons=auto --git'
 
 # 树形目录视图
-alias tree='eza --tree --icons'
-alias lt="eza --tree --level=2 --icons --git"
-alias ltree="eza --tree --level=2 --long --icons --git"
+alias tree='eza --tree --icons=auto'
+alias lt="eza --tree --level=2 --icons=auto --git"
+alias ltree="eza --tree --level=2 --long --icons=auto --git"
 
 # 复用 ls 的补全（避免为 eza 单独定义补全函数）
 compdef eza=ls
