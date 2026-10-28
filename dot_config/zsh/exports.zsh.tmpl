@@ -15,7 +15,14 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # ---------- PATH：bob 安装的 nvim ----------
-export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+# 兼容新旧 bob 数据目录：
+#   - 旧版 bob（旧电脑）：~/.local/share/bob/nvim-bin
+#   - bob 4.x（新电脑）：~/Library/Application Support/bob/nvim-bin
+if [[ -d "$HOME/.local/share/bob/nvim-bin" ]]; then
+  export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+elif [[ -d "$HOME/Library/Application Support/bob/nvim-bin" ]]; then
+  export PATH="$HOME/Library/Application Support/bob/nvim-bin:$PATH"
+fi
 
 # ---------- 分页器（man 手册高亮显示） ----------
 if command -v bat >/dev/null 2>&1; then
