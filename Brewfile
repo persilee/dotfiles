@@ -223,3 +223,5 @@ cask "obsidian"
 cask "ubersicht"
 cask "waifux"
 cask "wezterm"  # 由 wezterm@nightly 改为稳定版：nightly 每次更新体积大且安装易卡
+brew "starship"
+brew "bob"
