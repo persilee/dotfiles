@@ -1,0 +1,87 @@
+# ========== 主题与配色 ==========
+theme = "Dracula"
+background = #191521
+background-opacity = 0.50
+background-blur-radius = 66
+window-theme = "dark"
+# 对比度保护会强制压暗低对比度的前景色（如粉色文字配橙色背景会变黑），
+# 关闭以保证应用输出颜色忠实显示；如需保留可改为较小值如 0.5
+minimum-contrast = 1.2 
+
+# ========== 字体与排版 ==========
+# 字体 fallback 链：主英文 → Nerd 图标 → 等宽中文 → 系统兜底
+font-family = "JetBrains Mono"
+# font-family = "JetBrainsMono Nerd Font"
+# font-family = "Sarasa Term SC Nerd"
+# font-family = "LXGW WenKai Mono"
+# font-family = "Symbols Nerd Font Mono"
+# 当遇到斜体请求时，中文使用其他支持原生斜体的字体
+# font-family-italic = "Fira Code"    
+# font-family-italic = "LXGW WenKai Mono"    
+# font-family-italic = "Symbols Nerd Font Mono"
+# 允许 Ghostty 自动为没有斜体文件的字体合成斜体和粗斜体
+font-codepoint-map = U+2E80-U+9FFF,U+F900-U+FAFF,U+FF00-U+FFEF=HarmonyOS Sans SC
+
+font-synthetic-style = bold,italic,bold-italic
+adjust-icon-height = -38%
+font-size = 14
+# 编程字体特性：上下文连字、风格集 1、斜杠零
+font-feature = "calt"
+font-feature = "ss01"
+font-feature = "zero"
+
+# 开启字体轻微加粗
+font-thicken = true
+# 加粗强度，默认 100，范围 80-200；110-120 刚好是“稍稍加粗”的效果
+font-thicken-strength = 116
+
+# ========== 光标设置 ==========
+cursor-color = #FF79C6
+cursor-text = #1e1e2e
+#cursor-invert-fg-bg = true
+adjust-cursor-thickness = 1
+cursor-style = block
+cursor-style-blink = false
+adjust-cell-height = 10 
+
+# ========== 窗口外观与布局 ==========
+window-padding-x = 6, 6 
+window-padding-y = 6, 6
+window-padding-color = background
+window-padding-balance = true
+unfocused-split-opacity = 0.8
+
+window-decoration = auto
+window-save-state = "always"
+window-inherit-working-directory = true
+
+# ========== macOS 专属优化 ==========
+macos-window-buttons = hidden
+macos-titlebar-style = hidden
+macos-titlebar-proxy-icon = hidden
+macos-option-as-alt = true
+macos-non-native-fullscreen = true
+
+# ========== 交互与行为 ==========
+shell-integration-features = no-cursor,sudo,no-title
+mouse-hide-while-typing = true
+
+# ========== 快速终端（全局下拉） ==========
+quick-terminal-animation-duration = 0.15
+quick-terminal-position = top
+quick-terminal-screen = macos-menu-bar
+keybind = "global:cmd+`=toggle_quick_terminal"
+
+# 启用 Neovide 风格的光标拖尾（和 smear-cursor 效果最接近）
+custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl
+
+# 关键：窗口失焦时也保持动画运行，避免拖尾冻结
+custom-shader-animation = true
+
+# ================ 快捷键 ===================
+# Cmd + ; 映射为右方向键
+keybind = super+;=csi:C
+# Cmd + k 清屏
+keybind = super+k=text:\x0c
+
+
