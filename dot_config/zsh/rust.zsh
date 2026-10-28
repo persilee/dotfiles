@@ -2,5 +2,6 @@
 # ~/.config/zsh/rust.zsh —— Rust / cargo 环境
 # =========================================================
 
-# 加载 rustup 生成的环境文件（把 ~/.cargo/bin 加入 PATH 并设置 rustup 工具链）
-. "$HOME/.local/bin/env"
+# 加载 uv 生成的环境文件（把 ~/.local/bin 加入 PATH）
+# 未安装 uv 的机器跳过（容错，避免启动报错）
+[[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
