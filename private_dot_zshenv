@@ -1,8 +1,17 @@
 # =========================================================
 # ~/.zshenv —— zsh 启动最先读取的入口文件（固定路径）
-# 作用：设置 ZDOTDIR，让 zsh 从 ~/.config/zsh/ 加载整套配置
-# 说明：本文件只做这一件事；其余环境变量在 $ZDOTDIR/.zshenv 中定义
+# 作用：设置 ZDOTDIR 与 XDG 基础目录，让 zsh 从 ~/.config/zsh/ 加载整套配置
+# 说明：XDG 变量必须放在本文件。$ZDOTDIR/.zshenv 的重新读取
+#       在部分 zsh 版本/系统上不可靠（实测 Mac Mini 系统 zsh 不加载），
+#       放在这里才能保证所有会话生效。
 # =========================================================
 
 # 将 zsh 配置目录指向 ~/.config/zsh/
 export ZDOTDIR="$HOME/.config/zsh"
+
+# ---------- XDG 基础目录 ----------
+# 统一配置/缓存/数据/状态目录位置
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
