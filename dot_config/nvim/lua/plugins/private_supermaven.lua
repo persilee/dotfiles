@@ -7,7 +7,7 @@ return {
   -- 临时禁用（2026-10-30）：新 Mac Mini 无法连接 supermaven.com
   -- （DNS 被墙 + 系统代理 127.0.0.1:6696 无进程监听），InsertEnter 时
   -- 插件初始化同步等网络导致 nvim 卡死。代理环境就绪后删除本行即可恢复。
-  enabled = false,
+  enabled = true,
 
   event = "InsertEnter", -- 进入插入模式时加载
 

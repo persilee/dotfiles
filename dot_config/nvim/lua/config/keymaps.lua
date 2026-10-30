@@ -45,7 +45,7 @@ map({ "n", "v" }, "<C-S-A-s>", ":wall<CR>", opts) -- 保存全部文件
 map({ "n", "v" }, "<C-S-A-q>", ":q<CR>", opts) -- 关闭
 map({ "n", "v" }, "<C-S-A-x>", ":wq<CR>", opts) -- 保存并关闭
 map({ "n", "v" }, "<leader>q", ":q<CR>", opts)
-map({ "n", "v" }, "<leader>w", ":w<CR>", opts)
+map({ "n", "v" }, "<leader>w", ":w !sudo tee % > /dev/null<CR>", opts)
 map({ "n", "v" }, "<leader>Q", ":wq<CR>", opts)
 
 -- 行移动

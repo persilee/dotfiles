@@ -33,4 +33,7 @@ zvm_after_init() {
   # ↑/↓：按子串搜索历史（^[[A/^[[B 是上下箭头转义码）
   bindkey '^[[A' history-substring-search-up
   bindkey '^[[B' history-substring-search-down
+
+  # fzf：Ctrl+R 搜索历史命令（zsh-vi-mode 会重置它，这里重新绑定）
+  bindkey '^R' fzf-history-widget
 }
