@@ -4,3 +4,7 @@
 .config/zsh/plugins
 **/.DS_Store
 .config/pigma/debug.log
+
+# 仓库文档，只留在仓库，不部署到家目录
+README.md
+MIGRATION.md
