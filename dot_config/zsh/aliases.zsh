@@ -12,6 +12,12 @@ alias ll='eza -lh --icons=auto --git'
 # 详细信息列表（含隐藏文件）
 alias la='eza -lah --icons=auto --git'
 
+# 详细信息列表 + 目录递归总大小（排查哪个目录占空间）
+alias llt='eza -lh --total-size --icons=auto --git'
+
+# 目录总占用（真实磁盘占用，含全部子目录）
+alias dus='du -sh'
+
 # 树形目录视图
 alias tree='eza --tree --icons=auto'
 alias lt="eza --tree --level=2 --icons=auto --git"
