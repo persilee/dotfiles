@@ -11,6 +11,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # ---------- PATH：个人脚本 ----------
 export PATH="$HOME/.local/bin:$PATH"
 
+# ---------- PATH：mason（nvim 语言服务器，如 lua-language-server / texlab） ----------
+# mason 安装的 LSP 二进制在此目录，lsp.lua 里用裸命令名调用，故需进 PATH
+if [[ -d "$HOME/.local/share/nvim/mason/bin" ]]; then
+  export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+fi
+
 # ---------- PATH：rustup / cargo ----------
 export PATH="$HOME/.cargo/bin:$PATH"
 
