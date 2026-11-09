@@ -6,7 +6,7 @@ return {
     opts = {
       formatters_by_ft = {
         lua = { "stylua" },
-        python = { "black" },
+        python = { "ruff_format" }, -- ruff format（原 black 未安装，改用 ruff）
         javascript = { "prettier" },
         typescript = { "prettier" },
         json = { "jq" },
