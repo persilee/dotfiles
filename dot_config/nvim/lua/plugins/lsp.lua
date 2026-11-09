@@ -243,6 +243,59 @@ return {
       vim.lsp.enable("jsonls")
       -- ==================== Markdown =================
       vim.lsp.enable("marksman")
+
+      -- ==================== Go ===================
+      vim.lsp.config["gopls"] = {
+        cmd = { "gopls" },
+        filetypes = { "go", "gomod", "gowork", "gotmpl" },
+        root_markers = { "go.work", "go.mod", ".git" },
+        capabilities = capabilities,
+        on_attach = on_attach,
+        settings = {
+          gopls = {
+            analyses = {
+              unusedparams = true,
+              shadow = true,
+            },
+            staticcheck = true,
+            usePlaceholders = true,
+          },
+        },
+      }
+      vim.lsp.enable("gopls")
+
+      -- ==================== YAML ===================
+      vim.lsp.config["yamlls"] = {
+        cmd = { "yaml-language-server", "--stdio" },
+        filetypes = { "yaml", "yaml.docker-compose", "yaml.gitlab" },
+        root_markers = { ".git", "docker-compose.yml", "docker-compose.yaml" },
+        capabilities = capabilities,
+        on_attach = on_attach,
+        settings = {
+          yaml = {
+            validate = true,
+            schemaStore = { enable = true },
+            schemas = {
+              { fileMatch = { ".github/workflows/*" }, url = "https://json.schemastore.org/github-workflow.json" },
+              {
+                fileMatch = { "docker-compose*.yml", "docker-compose*.yaml" },
+                url = "https://json.schemastore.org/docker-compose.json",
+              },
+            },
+          },
+        },
+      }
+      vim.lsp.enable("yamlls")
+
+      -- ==================== TOML ===================
+      vim.lsp.config["taplo"] = {
+        cmd = { "taplo", "lsp", "stdio" },
+        filetypes = { "toml" },
+        root_markers = { ".git", "Cargo.toml", "pyproject.toml" },
+        capabilities = capabilities,
+        on_attach = on_attach,
+      }
+      vim.lsp.enable("taplo")
     end,
   },
 }
