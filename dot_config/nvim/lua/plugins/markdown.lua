@@ -5,6 +5,11 @@ return {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.icons" },
     ft = { "markdown", "llm" },
+    -- VSCode 的 vscode-neovim 不支持 conceal 与行内虚拟文本，
+    -- 该插件会把表格渲染成"半边边框 + 原始竖线"，故在 VSCode 中禁用
+    cond = function()
+      return not vim.g.vscode
+    end,
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
     opts = {
@@ -76,6 +81,8 @@ return {
         min_width = 80,
         -- borders
         border = "thin",
+        -- 边框行不加任何高亮：避免代码块第一行/最后一行出现黑色背景（透明效果）
+        highlight_border = false,
         left_pad = 1,
         right_pad = 1,
         -- language info
